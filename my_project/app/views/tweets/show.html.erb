@@ -1,0 +1,10 @@
+
+ <% tweet = Tweet.find(10)%>
+ <h1><%= tweet.status %></h1>
+ <p> Posted by 
+
+  <%= link_to tweet.zombie.name, 
+   tweets_path(tweet.zombie), 
+   data: {confirm: 'Are you sure?'}
+  %> 
+ </p>
